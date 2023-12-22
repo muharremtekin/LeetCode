@@ -1,8 +1,8 @@
 using System.Text;
 
-sealed class MergeStringsAlternately
+public sealed class MergeStringsAlternately
 {
-    public static string MergeAlternately(string word1, string word2)
+    public static string Solution(string word1, string word2)
     {
         StringBuilder merged = new StringBuilder();
         int w1 = word1.Length;
