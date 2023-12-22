@@ -1,9 +1,7 @@
 ﻿
 
-// MergeStringsAlternately.MergeAlternately("qwe","asd");
-string word1 = "muharrem";
-string word2 = "ahmethan";
 
-string mergedRes = MergeStringsAlternately.MergeAlternately(word1,word2);
+IList<bool> res = KidsWithCandies.Solution([4, 2, 4, 5, 1, 3], 2);
 
-Console.WriteLine(mergedRes);
+foreach (bool item in res)
+    Console.Write(item + ", ");
