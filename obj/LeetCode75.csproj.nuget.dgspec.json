@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Muharrem\\Desktop\\LeetCode75\\LeetCode75.csproj": {}
+    "C:\\Users\\muhar\\OneDrive\\Masaüstü\\LeetCode75\\LeetCode75.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Muharrem\\Desktop\\LeetCode75\\LeetCode75.csproj": {
+    "C:\\Users\\muhar\\OneDrive\\Masaüstü\\LeetCode75\\LeetCode75.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Muharrem\\Desktop\\LeetCode75\\LeetCode75.csproj",
+        "projectUniqueName": "C:\\Users\\muhar\\OneDrive\\Masaüstü\\LeetCode75\\LeetCode75.csproj",
         "projectName": "LeetCode75",
-        "projectPath": "C:\\Users\\Muharrem\\Desktop\\LeetCode75\\LeetCode75.csproj",
-        "packagesPath": "C:\\Users\\Muharrem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Muharrem\\Desktop\\LeetCode75\\obj\\",
+        "projectPath": "C:\\Users\\muhar\\OneDrive\\Masaüstü\\LeetCode75\\LeetCode75.csproj",
+        "packagesPath": "C:\\Users\\muhar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\muhar\\OneDrive\\Masaüstü\\LeetCode75\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Muharrem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\muhar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
