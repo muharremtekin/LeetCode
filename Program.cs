@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-﻿
-=======
-﻿
 
 
-IList<bool> res = KidsWithCandies.Solution([4, 2, 4, 5, 1, 3], 2);
+string s = "  merhaba   muharrem  nasılsın? ";
 
-foreach (bool item in res)
-    Console.Write(item + ", ");
->>>>>>> 5a744e65119ed0cfd9c5c89dbc49d7765d8261e0
+Console.WriteLine(ReverseWordsInAString.Solution(s));

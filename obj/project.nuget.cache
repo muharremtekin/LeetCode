@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "fLh8Vr4hiZ962JHRRnFUrrYpDuk7P8CgQZF04fb1gkxBENGukGEnRZlZtik2g2YQ0vchqnuMRV5rCYgB7S21iQ==",
-=======
-  "dgSpecHash": "F5NUvlIOEjanPydGy+53NlNTSenRA5SdS+SrUTIoOryOR9+WVkqPcdk6HvuDqilC+4PsUAtW7MZ7jPJst+p/LQ==",
->>>>>>> 5a744e65119ed0cfd9c5c89dbc49d7765d8261e0
+  "dgSpecHash": "A3oLkq8tCZ1TTsPJQYdlhI5TUrzm6vv/DLIUZW5AwR5qUV0/C1UjZHzEjEjVfn9G2D4T6u+SjBOhRzD+hrGyjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\muhar\\OneDrive\\Masaüstü\\LeetCode75\\LeetCode75.csproj",
+  "projectFilePath": "C:\\Users\\muhar\\Masaüstü\\LeetCode75\\LeetCode75.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
