@@ -1,5 +1,7 @@
 
 
-string s = "  merhaba   muharrem  nasılsın? ";
+int[] arr = new int[] { 2, 3, 4 };
 
-Console.WriteLine(ReverseWordsInAString.Solution(s));
+var ans = ProductOfArrayExceptSelf.Solution(arr);
+foreach (var item in ans)
+    Console.WriteLine(item);
