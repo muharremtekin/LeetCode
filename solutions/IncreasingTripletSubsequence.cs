@@ -6,24 +6,29 @@ public class IncreasingTripletSubsequence
     // true
     // Expected
     // false
-    
+
+    /// <summary>
+    /// time complexity: O(n)
+    /// space complexity O(1)
+    /// </summary>
+    /// <param name="nums"></param>
+    /// <returns></returns>
     public static bool Solution(int[] nums)
     {
-        List<int> list = nums.ToList();
-        list.Sort();
-        
-        if (list.Count < 3)
+
+        if (nums.Length < 3)
             return false;
 
-        int tempNum = 0;
+        int small = int.MaxValue;
+        int big = int.MaxValue;
 
-        for (int i = 0; i < list.Count - 1; i++)
+        foreach (int num in nums)
         {
-            // TODO: ardışık olarak küçükten büyüğe doğru giden 3 sayı varsa true döndür.
-            if (list[i] < list[i + 1])
-                tempNum++;
-
-            if (tempNum >= 2)
+            if (num <= small)
+                small = num;
+            else if (num <= big)
+                big = num;
+            else
                 return true;
         }
 

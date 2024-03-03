@@ -8,24 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\muharrem.tekin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\muhar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\muharrem.tekin\\Desktop\\LeetCode75\\LeetCode75.csproj",
+      "projectUniqueName": "c:\\Users\\muhar\\Masaüstü\\LeetCode75\\LeetCode75.csproj",
       "projectName": "LeetCode75",
-      "projectPath": "C:\\Users\\muharrem.tekin\\Desktop\\LeetCode75\\LeetCode75.csproj",
-      "packagesPath": "C:\\Users\\muharrem.tekin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\muharrem.tekin\\Desktop\\LeetCode75\\obj\\",
+      "projectPath": "c:\\Users\\muhar\\Masaüstü\\LeetCode75\\LeetCode75.csproj",
+      "packagesPath": "C:\\Users\\muhar\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\muhar\\Masaüstü\\LeetCode75\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\muharrem.tekin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\muhar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -45,11 +40,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -71,11 +61,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
->>>>>>> adcc9453c87383e310ad5ff84cd0eb86f343d124
       }
     }
   }
