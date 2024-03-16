@@ -1,5 +1,6 @@
 
-int[] nums = { 6,7,1,2 };
-bool result = IncreasingTripletSubsequence.Solution(nums);
+char[] chars = { 'a', 'a', 'b','b' };
+string c = "aabbccc";
+var result = StringCompression.Solution(c.ToCharArray());
 
 Console.WriteLine(result);
