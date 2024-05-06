@@ -1,6 +1,4 @@
 
-char[] chars = { 'a', 'a', 'b','b' };
-string c = "aabbccc";
-var result = StringCompression.Solution(c.ToCharArray());
+var result = IsSubsequence.Solution("acb","ahbagdc"); // false döndürmesi bekleniyor
 
 Console.WriteLine(result);
