@@ -4,6 +4,7 @@ public class UniqueNumberOfOccurrences
 {
     // Zaman Karmaşıklığı: O(n * k), en kötü durumda O(n^2)
     // Uzay Karmaşıklığı: O(k), en kötü durumda O(n)
+    // Not: O(k)'daki k = arr dizisinden kalandır.
     public static bool Solution(int[] arr)
     {
         // Input: arr = [-3,0,1,-3,1,1,1,-3,10,0]
