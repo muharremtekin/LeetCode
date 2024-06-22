@@ -15,36 +15,48 @@ public class EqualRowAndColumnPairs
     // - (Row 2, Column 2): [2,4,2,2]
     // - (Row 3, Column 2): [2,4,2,2]
 
-    // eğer 
     public static int Solution(int[][] grid)
     {
         int n = grid.Length;
         var rowCount = new Dictionary<int, int>();
-        
-        // Satırları hash kodları ile sakla
-        for (int i = 0; i < n; i++) {
+
+        int ComputeHash(int[] array)
+        {
+            var hash = new System.HashCode();
+            foreach (var item in array)
+            {
+                hash.Add(item);
+            }
+            return hash.ToHashCode();
+        }
+
+        for (int i = 0; i < n; i++)
+        {
             var row = grid[i];
-            int rowHash = row.GetHashCode();
-            if (!rowCount.ContainsKey(rowHash)) {
+            int rowHash = ComputeHash(row);
+            if (!rowCount.ContainsKey(rowHash))
+            {
                 rowCount[rowHash] = 0;
             }
             rowCount[rowHash]++;
         }
-        
+
         int count = 0;
-        
-        // Sütunları kontrol et ve satırlarla eşleştir
-        for (int j = 0; j < n; j++) {
+
+        for (int j = 0; j < n; j++)
+        {
             var col = new int[n];
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++)
+            {
                 col[i] = grid[i][j];
             }
-            int colHash = col.GetHashCode();
-            if (rowCount.ContainsKey(colHash)) {
+            int colHash = ComputeHash(col);
+            if (rowCount.ContainsKey(colHash))
+            {
                 count += rowCount[colHash];
             }
         }
-        
+
         return count;
     }
 }
