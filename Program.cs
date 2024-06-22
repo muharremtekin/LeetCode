@@ -1,3 +1,3 @@
 
-int result = EqualRowAndColumnPairs.Solution([[2,1],[3,32]]);
+var result = RemovingStarsFromaString.Solution("leet**cod*e");
 Console.WriteLine(result);
