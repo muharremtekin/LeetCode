@@ -1,4 +1,4 @@
 
-var result = AsteroidCollision.Solution([5, 10, -5]);
+var result = ContainerWithMostWater.Solution([1, 8, 6, 2, 5, 4, 8, 3, 7]);
 
-Console.WriteLine(result.ToArrayString());
+Console.WriteLine(result);
