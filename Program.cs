@@ -1,4 +1,4 @@
 
-var result = ContainerWithMostWater.Solution([1, 8, 6, 2, 5, 4, 8, 3, 7]);
+var result = FindPivotIndex.PivotIndex([-1,-1,0,1,1,0]);
 
 Console.WriteLine(result);
