@@ -1,4 +1,4 @@
 
-var result = AsteroidCollision.Solution([5, 10, -5]);
+var result = FindPivotIndex.PivotIndex([-1,-1,0,1,1,0]);
 
-Console.WriteLine(result.ToArrayString());
+Console.WriteLine(result);
