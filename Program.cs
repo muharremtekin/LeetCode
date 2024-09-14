@@ -1,4 +1,12 @@
 
-var result = FindPivotIndex.PivotIndex([-1,-1,0,1,1,0]);
+var results = new List<int>();
 
-Console.WriteLine(result);
+int[] inputs = new int[] { 1, 100, 3001, 3002 };
+
+var recentCounter = new RecentCounter();
+
+foreach (int item in inputs)
+{
+    var response = recentCounter.Ping(item);
+    results.Add(response);
+}
