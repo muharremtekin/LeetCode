@@ -26,10 +26,8 @@ public class MaxConsecutiveOnes3
 
                 left++;
             }
-
             maxLenght = Math.Max(maxLenght, right - left + 1);
         }
-
         return maxLenght;
     }
 }
