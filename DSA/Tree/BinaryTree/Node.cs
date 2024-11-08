@@ -13,6 +13,12 @@ public class Node<T>
         Left = null;
         Right = null;
     }
+        public Node(T value, Node<T> left = null, Node<T> right = null)
+    {
+        Value = value;
+        Left = left;
+        Right = right;
+    }
 
     public override string ToString() => $"{Value}";
 }

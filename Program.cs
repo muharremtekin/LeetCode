@@ -1,7 +1,5 @@
 
-List<string> logs = ["88 99 200", "88 99 300", "99 32 100", "12 12 15"];
-int threshold = 2;
 
-var res = OnlineAssesmentDemoQuestionOne.ProcessLogs(logs, threshold);
+var result = FindTheTownJudge.FindJudge(3, [[1, 3], [2, 3]]);
 
-Console.WriteLine(res);
+Console.WriteLine(result);
