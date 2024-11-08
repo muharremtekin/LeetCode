@@ -17,13 +17,6 @@ public class PalindromicSubstrings
     // Constraints:
     // 1 <= s.length <= 1000
     // s consists of lowercase English letters.
-
-    /// <summary>
-    /// brute force
-    /// O(n^3)
-    /// </summary>
-    /// <param name="s"></param>
-    /// <returns></returns>
     public static int CountSubstrings(string s)
     {
 
@@ -34,7 +27,7 @@ public class PalindromicSubstrings
             for (int i = 0; i + k <= s.Length; i++)
             {
                 int start = i;
-                int end = i + k - 1;  
+                int end = i + k - 1; 
 
                 bool isPalindrome = true;
 
@@ -57,5 +50,37 @@ public class PalindromicSubstrings
         return palindromicCount;
     }
 
+    public static int CountPalindromicSubstrings(string s)
+    {
+        int count = 0;
 
+        // Her karakteri ve her çift karakteri merkez kabul edip genişlet
+        for (int i = 0; i < s.Length; i++)
+        {
+            // Tek karakterli merkez (örneğin "a", "b")
+            count += ExpandAroundCenter(s, i, i);
+
+            // Çift karakterli merkez (örneğin "aa", "bb")
+            count += ExpandAroundCenter(s, i, i + 1);
+        }
+
+        return count;
+    }
+
+    // Merkezden genişleyen fonksiyon
+    static int ExpandAroundCenter(string s, int left, int right)
+    {
+        int count = 0;
+
+        // Sola ve sağa genişletme
+        while (left >= 0 && right < s.Length && s[left] == s[right])
+        {
+            // Palindrom bulundu, sayacı artır
+            count++;
+            left--;  // Sol tarafa genişlet
+            right++; // Sağ tarafa genişlet
+        }
+
+        return count;
+    }
 }
