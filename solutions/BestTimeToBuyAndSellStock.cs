@@ -22,9 +22,20 @@
 // 0 <= prices[i] <= 104
 public class BestTimeToBuyAndSellStock
 {
+    
+    /// <summary>
+    /// Calculates the maximum profit that can be achieved from buying and selling stock on different days.
+    /// </summary>
+    /// <param name="prices">An array where each element represents the stock price on a given day.</param>
+    /// <returns>The maximum profit that can be achieved. If no profit is possible, returns 0.</returns>
     public static int MaxProfit(int[] prices)
     {
+        int maxProfit = 0;
 
-        return 0;
+        for (int i = 0; i < prices.Length; i++)
+            for (int j = i + 1; j < prices.Length; j++)
+                if (prices[j] - prices[i] > maxProfit) maxProfit = prices[j] - prices[i];
+
+        return maxProfit;
     }
 }
