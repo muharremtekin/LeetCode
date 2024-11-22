@@ -1,5 +1,9 @@
 
+// Arrange
+var list = new MyLinkedList<int>();
 
-var result = FindTheTownJudge.FindJudge(3, [[1, 3], [2, 3]]);
+// Act
+list.Append(12);
+list.Append(33);
 
-Console.WriteLine(result);
+Console.WriteLine(list.ToString());
