@@ -15,6 +15,11 @@ public class MaximumTwinSumOfALinkedList
         }
     }
 
+    /// <summary>
+    /// Calculates the sum of the two largest elements in a linked list.
+    /// </summary>
+    /// <param name="head">The head node of the linked list.</param>
+    /// <returns>The sum of the two largest elements in the linked list.</returns>
     public int PairSum(ListNode head)
     {
         // en büyük iki elemanın toplamı
