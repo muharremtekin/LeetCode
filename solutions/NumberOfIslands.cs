@@ -37,8 +37,8 @@
 // grid[i][j] is '0' or '1'.
 public static class NumberOfIslands
 {
-    static int[] rowDir = { -1, 1, 0, 0 };
-    static int[] colDir = { 0, 0, -1, 1 };
+    static readonly int[] rowDir = { -1, 1, 0, 0 };
+    static readonly int[] colDir = { 0, 0, -1, 1 };
     public static int NumIslands(char[][] grid)
     {
         int n = grid.Length;
