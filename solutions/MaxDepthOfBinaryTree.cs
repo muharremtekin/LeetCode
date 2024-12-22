@@ -12,6 +12,11 @@ public class MaxDepthOfBinaryTree
             this.right = right;
         }
     }
+    /// <summary>
+    /// Calculates the maximum depth of a binary tree.
+    /// </summary>
+    /// <param name="root">The root node of the binary tree.</param>
+    /// <returns>The maximum depth of the binary tree.</returns>
     public static int MaxDepth(TreeNode root)
     {
         if (root == null) return 0;
