@@ -8,6 +8,6 @@ sealed class GreatestCommonDivisorOfStrings
         int gdcLen = Gdc(str1.Length, str2.Length);
         return str1.Substring(0, gdcLen);
     }
-
+    // Euclidean algorithm
     private static int Gdc(int x, int y) => y == 0 ? x : Gdc(y, x % y);
 }

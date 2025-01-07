@@ -1,4 +1,9 @@
 
-var result = FindPivotIndex.PivotIndex([-1,-1,0,1,1,0]);
+// Arrange
+var list = new MyLinkedList<int>();
 
-Console.WriteLine(result);
+// Act
+list.Append(12);
+list.Append(33);
+
+Console.WriteLine(list.ToString());
