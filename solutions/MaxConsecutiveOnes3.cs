@@ -10,14 +10,24 @@ public class MaxConsecutiveOnes3
 {
     public static int LongestOnes(int[] nums, int k)
     {
+        int zeroCount = 0;
+        int maxLenght = 0;
         int left = 0;
-        int right = nums.Length;
 
-        for (int i = 0; i < nums.Length; i++)
+        for (int right = 0; right < nums.Length; right++)
         {
+            if (nums[right] == 0)
+                zeroCount++;
 
+            while (zeroCount > k)
+            {
+                if (nums[left] == 0)
+                    zeroCount--;
+
+                left++;
+            }
+            maxLenght = Math.Max(maxLenght, right - left + 1);
         }
-        
-        return 0;
+        return maxLenght;
     }
 }
