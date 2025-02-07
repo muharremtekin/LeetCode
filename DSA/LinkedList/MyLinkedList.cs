@@ -1,8 +1,7 @@
-public class SLNode<T>
+public class SLNode<T>(T value, SLNode<T>? next = null)
 {
-    public SLNode(T value) => Value = value;
-    public T Value { get; set; }
-    public SLNode<T> Next { get; set; }
+    public T Value { get; set; } = value;
+    public SLNode<T>? Next { get; set; } = next;
 }
 
 /// <summary>
