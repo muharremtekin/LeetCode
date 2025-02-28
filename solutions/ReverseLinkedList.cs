@@ -17,6 +17,21 @@ public class ListNode
         this.val = val;
         this.next = next;
     }
+
+
+    public static ListNode CreateLinkedList(IEnumerable<int> nums)
+    {
+        if (nums == null || !nums.Any()) return new ListNode();
+
+        ListNode dummy = new();
+        ListNode current = dummy;
+        foreach (int num in nums)
+        {
+            current.next = new ListNode(num);
+            current = current.next;
+        }
+        return dummy.next;
+    }
 }
 public class ReverseLinkedList
 {
