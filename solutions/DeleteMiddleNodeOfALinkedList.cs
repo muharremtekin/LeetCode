@@ -2,11 +2,35 @@
 
 public class DeleteMiddleNodeOfALinkedList
 {
+    public static ListNode DeleteMiddle2(ListNode head)
+    {
+        if (head is null || head.next is null) return head;
+
+        if (head.next.next is null)
+        {
+            head.next = null;
+            return head;
+        }
+
+        List<ListNode> nodes = new();
+
+        var node = head;
+        while (node != null)
+        {
+            nodes.Add(node);
+            node = node.next;
+        }
+
+        int middle = nodes.Count / 2;
+        nodes[middle-1].next = nodes[middle-1].next.next;
+
+        return head;
+    }
     public static ListNode DeleteMiddle(ListNode head)
     {
         if (head is null) return head;
 
-        if(head.next is null) return null;
+        if (head.next is null) return null;
 
         if (head.next.next is null)
         {
