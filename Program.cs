@@ -1,5 +1,5 @@
 
-var head = ListNode.CreateLinkedList([1, 3, 4, 7, 1, 2, 6]);
+var root = TreeNode.CreateBinaryTree([3,3,3]);
 
-var result = DeleteMiddleNodeOfALinkedList.DeleteMiddle(head);
+var result = CountGoodNodesInBinaryTree.GoodNodes(root);
 Console.WriteLine(result);
