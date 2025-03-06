@@ -10,11 +10,11 @@ public class TreeNode
         this.right = right;
     }
 
-    public static TreeNode CreateBinaryTree(int[] nums)
+    public static TreeNode CreateBinaryTree(int?[] nums)
     {
         if (nums is null || !nums.Any()) return new TreeNode();
 
-        var head = new TreeNode(val: nums[0]);
+        var head = new TreeNode(val: nums[0].Value);
         var queue = new Queue<TreeNode>();
         queue.Enqueue(head);
 
@@ -22,15 +22,15 @@ public class TreeNode
         {
             var current = queue.Dequeue();
 
-            if (i < nums.Length)
+            if (i < nums.Length && nums[i].HasValue)
             {
-                current.left = new TreeNode(nums[i]);
+                current.left = new TreeNode(nums[i].Value);
                 queue.Enqueue(current.left);
             }
 
-            if (i + 1 < nums.Length)
+            if (i + 1 < nums.Length && nums[i + 1].HasValue)
             {
-                current.right = new TreeNode(nums[i + 1]);
+                current.right = new TreeNode(nums[i + 1].Value);
                 queue.Enqueue(current.right);
             }
         }
