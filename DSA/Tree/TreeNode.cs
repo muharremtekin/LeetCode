@@ -37,4 +37,27 @@ public class TreeNode
 
         return head;
     }
+
+    public static TreeNode CreateBST(int?[] nums)
+    {
+        if (nums == null || nums.Length == 0 || !nums[0].HasValue)
+            return null;
+
+        var validNums = nums.Where(n => n.HasValue).Select(n => n.Value).OrderBy(n => n).ToList();
+        return BuildBST(validNums, 0, validNums.Count - 1);
+    }
+
+    private static TreeNode BuildBST(List<int> nums, int start, int end)
+    {
+        if (start > end)
+            return null;
+
+        int mid = start + (end - start) / 2;
+        TreeNode node = new TreeNode(nums[mid]);
+
+        node.left = BuildBST(nums, start, mid - 1);
+        node.right = BuildBST(nums, mid + 1, end);
+
+        return node;
+    }
 }
