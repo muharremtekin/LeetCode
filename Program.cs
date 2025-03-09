@@ -1,5 +1,5 @@
 
-var root = TreeNode.CreateBinaryTree([10, 5, -3, 3, 2, null, 11, 3, -2, null, 1]);
+var root = TreeNode.CreateBST([5, 3, 6, 2, 4, null, 7]);
 
-var result = PathSumIII.PathSum(root, 8);
+var result = DeleteNodeInABST.DeleteNode(root, 3);
 Console.WriteLine(result);
