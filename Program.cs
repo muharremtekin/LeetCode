@@ -1,5 +1,4 @@
 
-var root = TreeNode.CreateBST([5, 3, 6, 2, 4, null, 7]);
 
-var result = DeleteNodeInABST.DeleteNode(root, 3);
+var result = KeysAndRooms.CanVisitAllRooms([[1, 3], [3, 0, 1], [2], [0]]);
 Console.WriteLine(result);
