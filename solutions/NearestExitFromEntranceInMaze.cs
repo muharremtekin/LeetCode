@@ -4,8 +4,8 @@ public sealed class NearestExitFromEntranceInMaze
     {
         Queue<(int x, int y, int step)> queue = new();
 
-        int m = maze.Length; ; // satır/line
-        int n = maze[0].Length; // sütun/column
+        int m = maze.Length;
+        int n = maze[0].Length;
 
 
         bool[,] visited = new bool[m, n];
@@ -24,10 +24,8 @@ public sealed class NearestExitFromEntranceInMaze
             // should be empty and at the border
             // and it shouldn't at the step zero "0"
 
-            if (current.step != 0 && maze[current.y][current.x] == '.' && (current.x == n - 1 || current.x == 0))
-                return current.step;
-
-            if (current.step != 0 && maze[current.y][current.x] == '.' && (current.y == 0 || current.y == m - 1))
+            if (current.step != 0 && maze[current.y][current.x] == '.' &&
+                (current.x == n - 1 || current.x == 0 || current.y == 0 || current.y == m - 1))
                 return current.step;
 
             // up = y - 1;
@@ -48,6 +46,50 @@ public sealed class NearestExitFromEntranceInMaze
 
         }
 
+        return -1;
+    }
+
+
+    public static int NearestExitRefactored(char[][] maze, int[] entrance)
+    {
+        Queue<(int x, int y, int step)> queue = new();
+        int m = maze.Length;
+        int n = maze[0].Length;
+        bool[,] visited = new bool[m, n];
+
+        int startRow = entrance[0];
+        int startCol = entrance[1];
+
+        queue.Enqueue((startCol, startRow, 0));
+
+        visited[startRow, startCol] = true;
+
+        int[][] directions = { new int[] { 0, 1 }, new int[] { 0, -1 }, new int[] { 1, 0 }, new int[] { -1, 0 } };
+
+        while (queue.Count > 0)
+        {
+            (int x, int y, int step) current = queue.Dequeue();
+
+            bool isAtBorder = current.x == 0 || current.x == n - 1 || current.y == 0 || current.y == m - 1;
+            bool isStartCell = current.y == startRow && current.x == startCol;
+
+            if (isAtBorder && !isStartCell)
+                return current.step;
+
+
+            foreach (var dir in directions)
+            {
+                int nextY = current.y + dir[0];
+                int nextX = current.x + dir[1];
+
+                if (nextY >= 0 && nextY < m && nextX >= 0 && nextX < n &&
+                    maze[nextY][nextX] == '.' && !visited[nextY, nextX])
+                {
+                    visited[nextY, nextX] = true;
+                    queue.Enqueue((nextX, nextY, current.step + 1));
+                }
+            }
+        }
         return -1;
     }
 
