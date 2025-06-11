@@ -1,4 +1,30 @@
 
+// var reuslt1 = NearestExitFromEntranceInMaze.NearestExit([['+', '+', '.', '+'], ['.', '.', '.', '+'], ['+', '+', '+', '.']], [1, 2]);
 
-var result = FindCenterOfStarGraph.FindCenter([[1, 2], [2, 3], [4, 2]]);
-Console.WriteLine(result);
+// Console.WriteLine(reuslt1);
+
+
+
+// var reuslt2 = NearestExitFromEntranceInMaze.NearestExit([['+', '+', '+'], ['.', '.', '.'], ['+', '+', '+']], [1, 0]);
+
+// Console.WriteLine(reuslt2);
+
+// var reuslt3 = NearestExitFromEntranceInMaze.NearestExit([['.','+','+','+','+'],
+//                                                          ['.','+','.','.','.'],
+//                                                          ['.','+','.','+','.'],
+//                                                          ['.','.','.','+','.'],
+//                                                          ['+','+','+','+','.']],
+//                                                          [0, 0]);
+
+// Console.WriteLine(reuslt3);
+
+
+
+var reuslt4 = NearestExitFromEntranceInMaze.NearestExit([[ '+', '.', '+', '+', '+', '+', '+' ],
+                                                         [ '+', '.', '+', '.', '.', '.', '+' ],
+                                                         [ '+', '.', '+', '.', '+', '.', '+' ],
+                                                         [ '+', '.', '.', '.', '.', '.', '+' ],
+                                                         ['+', '+', '+', '+', '.', '+', '.' ]],
+                                                         [0, 1]);
+
+Console.WriteLine(reuslt4);
