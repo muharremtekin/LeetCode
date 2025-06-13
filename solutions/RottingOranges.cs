@@ -25,9 +25,6 @@ public class RottingOranges
 
         int m = grid.Length;
         int n = grid[0].Length;
-
-        bool[,] visited = new bool[m, n];
-
         int freshCount = 0;
 
         // search rotten one
@@ -57,21 +54,12 @@ public class RottingOranges
             {
                 var current = queue.Dequeue();
 
-                if (visited[current.y, current.x]) continue;
-
-                visited[current.y, current.x] = true;
-
                 foreach (int[] dir in directions)
                 {
                     int nextY = current.y + dir[0];
                     int nextX = current.x + dir[1];
-
-                    if (nextY >= 0
-                        && nextY < m
-                        && nextX >= 0
-                        && nextX < n
-                        && visited[nextY, nextX] == false
-                        && grid[nextY][nextX] is 1)
+                    
+                    if (nextY >= 0 && nextY < m && nextX >= 0 && nextX < n && grid[nextY][nextX] == 1)
                     {
                         freshCount--;
                         grid[nextY][nextX] = 2;
