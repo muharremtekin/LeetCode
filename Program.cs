@@ -27,4 +27,7 @@ var reuslt4 = NearestExitFromEntranceInMaze.NearestExit([[ '+', '.', '+', '+', '
                                                          ['+', '+', '+', '+', '.', '+', '.' ]],
                                                          [0, 1]);
 
+
+
+
 Console.WriteLine(reuslt4);
