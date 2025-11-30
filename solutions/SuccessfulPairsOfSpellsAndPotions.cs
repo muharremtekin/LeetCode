@@ -1,34 +1,46 @@
+using System.Drawing;
+
 public class SuccessfulPairsOfSpellsAndPotions
 {
-    // https://leetcode.com/problems/successful-pairs-of-spells-and-potions/
-    public int[] SuccessfulPairs(int[] spells, int[] potions, long success)
+    /// <summary>
+    /// https://leetcode.com/problems/successful-pairs-of-spells-and-potions
+    /// n == spells.length
+    /// m == potions.length
+    /// 1 <= n, m <= 105
+    /// 1 <= spells[i], potions[i] <= 105
+    /// 1 <= success <= 1010
+    /// </summary>
+    /// <param name="spells"></param>
+    /// <param name="potions"></param>
+    /// <param name="success"></param>
+    /// <returns></returns>
+    public static int[] SuccessfulPairs(int[] spells, int[] potions, long success)
     {
         Array.Sort(potions);
-        int n = spells.Length, m = potions.Length;
-        int[] result = new int[n];
+        int[] result = new int[spells.Length];
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < spells.Length; i++)
         {
-            long need = (success + spells[i] - 1L) / spells[i];
+            long minPotionStrength = (success + spells[i] - 1) / spells[i];
 
-            if (need <= potions[0]) { result[i] = m; continue; }
-            if (need > potions[m - 1]) { result[i] = 0; continue; }
+            if (minPotionStrength > int.MaxValue)
+            {
+                result[i] = 0;
+                continue;
+            }
 
-            int idx = LowerBound(potions, need);
-            result[i] = m - idx;
+            int searchResult = Array.BinarySearch(potions, (int)minPotionStrength);
+
+            int firstValidIndex;
+            if (searchResult >= 0)
+                firstValidIndex = searchResult;
+            else
+                firstValidIndex = ~searchResult;
+
+
+            result[i] = potions.Length - firstValidIndex;
         }
+
         return result;
-    }
-
-    private int LowerBound(int[] arr, long target)
-    {
-        int l = 0, r = arr.Length;
-        while (l < r)
-        {
-            int mid = l + ((r - l) >> 1);
-            if ((long)arr[mid] < target) l = mid + 1;
-            else r = mid;
-        }
-        return l;
     }
 }
