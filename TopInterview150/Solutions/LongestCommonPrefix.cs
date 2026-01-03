@@ -23,13 +23,12 @@ public sealed class LongestCommonPrefixProblem
 
     private static string FindPrefix(string commonPrefix, string str)
     {
-        int n = Math.Min(commonPrefix.Length, str.Length); int index = 0;
+        int n = Math.Min(commonPrefix.Length, str.Length);
+        int index = 0;
         for (; index < n; index++)
         {
             if (commonPrefix[index] != str[index]) break;
         }
-        char[] strArray = new char[index];
-        Array.Copy(commonPrefix.ToCharArray(), strArray, index);
         return commonPrefix[..index];
     }
 }
