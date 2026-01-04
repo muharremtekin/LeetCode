@@ -27,4 +27,24 @@ public sealed class SumRootToLeafNumbers
         DFS(node.right, paths, currentNum);
 
     }
+
+    // Optimize edilmiş versiyon - List ve string işlemi yok
+    public static int SumNumbersOptimized(TreeNode root)
+    {
+        return DFSOptimized(root, 0);
+    }
+
+    private static int DFSOptimized(TreeNode node, int currentNum)
+    {
+        if (node is null) return 0;
+
+        currentNum = currentNum * 10 + node.val;
+
+        // Leaf node → sayıyı döndür
+        if (node.left is null && node.right is null)
+            return currentNum;
+
+        // Alt ağaçların toplamını döndür
+        return DFSOptimized(node.left, currentNum) + DFSOptimized(node.right, currentNum);
+    }
 }
