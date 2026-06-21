@@ -55,4 +55,42 @@ public class TaskScheduler
         var a = tasks.Length + n;
         return 0;
     }
+
+    // Greedy / matematiksel çözüm.
+    // En sık geçen görevler, aralarında n boşluk olacak şekilde zaman çizelgesinin
+    // iskeletini oluşturur. Diğer görevler bu boşlukları doldurur.
+    // Time: O(tasks.Length) | Space: O(1) — görev türü A-Z ile sınırlı.
+    public static int LeastIntervalV2(char[] tasks, int n)
+    {
+        if (tasks.Length == 0)
+            return 0;
+
+        int[] frequencies = new int[26];
+
+        foreach (char task in tasks)
+            frequencies[task - 'A']++;
+
+        int maxFrequency = 0;
+        int maxFrequencyCount = 0;
+
+        foreach (int frequency in frequencies)
+        {
+            if (frequency > maxFrequency)
+            {
+                maxFrequency = frequency;
+                maxFrequencyCount = 1;
+            }
+            else if (frequency == maxFrequency)
+            {
+                maxFrequencyCount++;
+            }
+        }
+
+        // (maxFrequency - 1) adet tam blok vardır. Her blokta en sık görev ile
+        // bir sonraki aynı görev arasında n + 1 zaman aralığı bulunur.
+        int minimumFrameLength = (maxFrequency - 1) * (n + 1) + maxFrequencyCount;
+
+        // Yeterli farklı görev varsa idle zamanı oluşmaz; toplam süre görev sayısıdır.
+        return Math.Max(tasks.Length, minimumFrameLength);
+    }
 }

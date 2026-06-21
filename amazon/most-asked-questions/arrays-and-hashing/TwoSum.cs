@@ -51,8 +51,42 @@ public class TwoSum
     {
         if (nums.Length < 3)
             return [0, 1];
+        return [];
+    }
 
-        
+
+
+    public static int[] TwoSumV2(int[] nums, int target)
+    {
+        Dictionary<int, int> numMap = new Dictionary<int, int>(); // A mapping to store numbers and their indices
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int complement = target - nums[i]; // Find the required number to reach the target
+            if (numMap.ContainsKey(complement))
+            {
+                return [numMap[complement], i]; // Return indices of the complement and current number
+            }
+            numMap[nums[i]] = i; // Store the number with its index
+        }
+        return []; // This line is never reached due to the problem guarantee
+    }
+
+
+    public int[] TwoSumV3(int[] nums, int target)
+    {
+        var dict = new Dictionary<int, int>();
+
+        // create a dict to store indexes of values of nums array
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int remained = target - nums[i];
+
+            if (dict.ContainsKey(remained))
+                return [dict[remained], i];
+
+            dict[nums[i]] = i;
+        }
 
         return [];
     }

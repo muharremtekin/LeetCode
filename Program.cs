@@ -17,18 +17,7 @@
 //                                                          [0, 0]);
 
 // Console.WriteLine(reuslt3);
+using System.Text;
 
-
-
-var reuslt4 = NearestExitFromEntranceInMaze.NearestExit([[ '+', '.', '+', '+', '+', '+', '+' ],
-                                                         [ '+', '.', '+', '.', '.', '.', '+' ],
-                                                         [ '+', '.', '+', '.', '+', '.', '+' ],
-                                                         [ '+', '.', '.', '.', '.', '.', '+' ],
-                                                         ['+', '+', '+', '+', '.', '+', '.' ]],
-                                                         [0, 1]);
-
-
-
-
-Console.WriteLine(reuslt4);
-
+var res = LongestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring("abcabcbb");
+Console.WriteLine(res);

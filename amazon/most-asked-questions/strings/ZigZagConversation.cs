@@ -9,27 +9,27 @@ public sealed class ZigZagConversation
     // Simülasyon yaklaşımı: Her satır için bir StringBuilder tutulur,
     // string üzerinde gezilirken her karakter ilgili satıra eklenir.
     // Time: O(n) | Space: O(n) — numRows adet StringBuilder allocate edilir.
-    public static string Convert(string s, int numRows)
-    {
-        if (numRows == 1 || numRows >= s.Length) return s;
+    // public static string Convert(string s, int numRows)
+    // {
+    //     if (numRows == 1 || numRows >= s.Length) return s;
 
-        var rows = new StringBuilder[numRows];
-        for (int i = 0; i < numRows; i++)
-            rows[i] = new StringBuilder();
+    //     var rows = new StringBuilder[numRows];
+    //     for (int i = 0; i < numRows; i++)
+    //         rows[i] = new StringBuilder();
 
-        int currentRow = 0;
-        bool goingDown = false;
+    //     int currentRow = 0;
+    //     bool goingDown = false;
 
-        foreach (char c in s)
-        {
-            rows[currentRow].Append(c);
-            if (currentRow == 0 || currentRow == numRows - 1)
-                goingDown = !goingDown;
-            currentRow += goingDown ? 1 : -1;
-        }
+    //     foreach (char c in s)
+    //     {
+    //         rows[currentRow].Append(c);
+    //         if (currentRow == 0 || currentRow == numRows - 1)
+    //             goingDown = !goingDown;
+    //         currentRow += goingDown ? 1 : -1;
+    //     }
 
-        return string.Concat(rows);
-    }
+    //     return string.Concat(rows);
+    // }
 
     // Optimize edilmiş Span yaklaşımı: Matematiksel index hesabıyla
     // hangi karakterin nereye gideceği doğrudan bulunur.
