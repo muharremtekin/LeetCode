@@ -19,5 +19,8 @@
 // Console.WriteLine(reuslt3);
 using System.Text;
 
-var res = LongestSubstringWithoutRepeatingCharacters.LengthOfLongestSubstring("abcabcbb");
+
+var root = TreeNode.CreateBinaryTree([3,9,20,null,null,15,7]);
+
+var res = BinaryTreeLevelOrderTraversal.LevelOrder(root);
 Console.WriteLine(res);
