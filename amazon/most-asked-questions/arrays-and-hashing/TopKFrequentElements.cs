@@ -1,6 +1,8 @@
 public class TopKFrequentElements
 {
     // https://leetcode.com/problems/top-k-frequent-elements/
+    // Time Complexity: O(n + m log m), where m is the number of unique values.
+    // Space Complexity: O(m + k), O(m) if the output array is excluded.
     public static int[] TopKFrequent(int[] nums, int k)
     {
         var dict = new Dictionary<int, int>();
@@ -21,6 +23,8 @@ public class TopKFrequentElements
     }
 
     // Bucket Sort: O(n) time, O(n) space.
+    // Time Complexity: O(n + m), which is O(n) because m <= n.
+    // Space Complexity: O(n + k), O(n) if the output array is excluded.
     // `buckets[f]` holds all numbers that occur exactly f times.
     public static int[] TopKFrequentV2(int[] nums, int k)
     {
@@ -59,6 +63,9 @@ public class TopKFrequentElements
     }
 
 
+    // Min Heap: keeps only the top k frequent values in the heap.
+    // Time Complexity: O(n + m log k), where m is the number of unique values.
+    // Space Complexity: O(m + k).
     public static int[] TopKFrequentV3(int[] nums, int k)
     {
         var frequencies = new Dictionary<int, int>();
@@ -96,6 +103,9 @@ public class TopKFrequentElements
     }
 
 
+    // Min Heap: same complexity as TopKFrequentV3.
+    // Time Complexity: O(n + m log k), where m is the number of unique values.
+    // Space Complexity: O(m + k).
     public static int[] TopKFrequentV4(int[] nums, int k)
     {
         Dictionary<int, int> frequencies = new();
