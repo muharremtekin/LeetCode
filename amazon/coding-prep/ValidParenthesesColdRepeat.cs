@@ -25,9 +25,41 @@ using System.Collections.Generic;
 
 public class ValidParenthesesColdRepeat
 {
+
+    // "([])"  -> son açılan parantezin ilk kapanan olması lazım
+    private readonly Dictionary<char, char> pairs = new Dictionary<char, char> { { '(', ')' }, { '[', ']' }, { '{', '}' } };
     public bool IsValid(string s)
     {
-        // your code here (delete the throw)
-        throw new NotImplementedException();
+        Stack<char> _stack = new();
+
+        foreach (char item in s)
+        {
+            if (item == '(' || item == '{' || item == '[')
+            {
+                _stack.Push(item);
+            }
+            else
+            {
+                if (_stack.Count == 0) return false;
+
+                char lastOpeningChar = _stack.Pop();
+
+                if (pairs[lastOpeningChar] != item) return false;
+            }
+        }
+
+        return _stack.Count == 0;
     }
+
+    // trace for "([)]"
+    // item | stack (önce) | aksiyon            | stack (sonra)
+    // (        {}             add to stack         {'('}
+    // [       {'('}           add to stack         {'(','['}
+    // )       {'(','['}       return false because it's not pair of last closed paranthese
+
+
+    // time complexity o(n), space complexity(n) m = worst case is n because it can be "((((("
+
+
+
 }

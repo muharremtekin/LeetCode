@@ -17,10 +17,4 @@
 //                                                          [0, 0]);
 
 // Console.WriteLine(reuslt3);
-using System.Text;
-
-
-var root = TreeNode.CreateBinaryTree([3,9,20,null,null,15,7]);
-
-var res = BinaryTreeLevelOrderTraversal.LevelOrder(root);
-Console.WriteLine(res);
+Console.WriteLine(new ValidParenthesesColdRepeat().IsValid("()[]{}"));
