@@ -19,7 +19,7 @@ public class CourseScheduleColdRepeat
 {
     public bool CanFinish(int numCourses, int[][] prerequisites)
     {
-        // your code here
-
+        // your code here (delete the throw)
+        throw new NotImplementedException();
     }
 }
