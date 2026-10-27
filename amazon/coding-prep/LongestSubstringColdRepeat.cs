@@ -31,9 +31,14 @@ public class LongestSubstringColdRepeat
     //   1. Trace "dvdf" (expected 3, "vdf") with the idea above.
     //      When the 2nd 'd' fails to add, what exactly happens to the set?
     //   2. Say the brute force + its complexity out loud (skipped today).
+
+    // 1- we need two pointer here. when add operation fails we set left pointer to last seen index of d and
+    // we can use hashmap (dictionary) here cuz we cant add a key value pair to it also we can store last
+    // seen indexes.
+    // 2- we can solve it in o(n) time and space complexity via a mix of two pointer and hashmap
     public int LengthOfLongestSubstring(string s)
     {
-        // your code here (delete the throw)
-        throw new NotImplementedException();
+
+        return 0;
     }
 }

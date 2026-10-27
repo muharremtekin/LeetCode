@@ -17,4 +17,4 @@
 //                                                          [0, 0]);
 
 // Console.WriteLine(reuslt3);
-Console.WriteLine(new ValidParenthesesColdRepeat().IsValid("()[]{}"));
+Console.WriteLine(new LongestSubstringColdRepeat().LengthOfLongestSubstring("abcabcbb"));
